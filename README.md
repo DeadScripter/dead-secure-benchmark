@@ -17,47 +17,15 @@ This repo includes the raw benchmark scripts plus the obfuscated outputs generat
 
 ## Current Results
 
-Measured on `2026-04-29 02:17 UTC` with the executor simulation runner.
+Measured on `2026-04-29 02:24 UTC` with the executor simulation runner.
 
 These numbers are runtime totals from executing the protected Lua, not obfuscator compile time.
 
 | Source | Output | Preset | Level | Runtime total |
 | --- | --- | --- | --- | ---: |
-| `benchmark.lua` | `benchmark.balanced.obf.lua` | balanced | 5 | `6.081299s` |
-| `benchmark.lua` | `benchmark.max.obf.lua` | max | 5 | `6.278645s` |
-| `bench2.lua` | `bench2.balanced.obf.lua` | balanced | 5 | `6.146944s` |
-| `bench2.lua` | `bench2.max.obf.lua` | max | 5 | `6.133538s` |
+| `benchmark.lua` | `benchmark.balanced.obf.lua` | balanced | 5 | `6.082363s` |
+| `benchmark.lua` | `benchmark.max.obf.lua` | max | 5 | `6.028744s` |
+| `bench2.lua` | `bench2.balanced.obf.lua` | balanced | 5 | `6.425191s` |
+| `bench2.lua` | `bench2.max.obf.lua` | max | 5 | `5.846576s` |
 
-## Hot Rows
-
-Rows from `benchmark.lua` after VM opcode fusion and builtin fast paths.
-
-| Row | Balanced | Max |
-| --- | ---: | ---: |
-| arithmetic loop | `0.305404s` | `0.303499s` |
-| function calls | `1.492312s` | `1.579396s` |
-| table create/insert | `1.797564s` | `1.896467s` |
-| table iteration | `0.522989s` | `0.562721s` |
-| string concat | `0.058431s` | `0.065108s` |
-| closure creation | `1.728397s` | `1.702999s` |
-| metatable index | `0.176202s` | `0.168455s` |
-
-## Run Commands
-
-From the Dead Secure workspace:
-
-```bash
-./testbal.sh benchmark.lua
-./testmax.sh benchmark.lua
-./testbal.sh bench2.lua
-./testmax.sh bench2.lua
-```
-
-Generated outputs are copied into this repo with these names:
-
-```text
-benchmark.balanced.obf.lua
-benchmark.max.obf.lua
-bench2.balanced.obf.lua
-bench2.max.obf.lua
-```
+Fastest current run: `bench2.max.obf.lua` at `5.846576s`.
