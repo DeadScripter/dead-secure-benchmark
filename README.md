@@ -8,24 +8,34 @@ This repo includes the raw benchmark scripts plus the obfuscated outputs generat
 
 | File | Purpose |
 | --- | --- |
-| `benchmark.lua` | Prometheus benchmark source |
-| `bench2.lua` | Second benchmark source that wyn and ib1 used |
+| `benchmark.lua` | Prometheus-style benchmark source |
+| `bench2.lua` | Second benchmark source with the same workload shape |
+| `bench3.lua` | Math, recursion, and table/string benchmark source |
+| `Benchmark4.lua` | LVMS-style VM loop benchmark source |
 | `benchmark.balanced.obf.lua` | `benchmark.lua` obfuscated with balanced preset, level 5 |
 | `benchmark.max.obf.lua` | `benchmark.lua` obfuscated with max preset, level 5 |
 | `bench2.balanced.obf.lua` | `bench2.lua` obfuscated with balanced preset, level 5 |
 | `bench2.max.obf.lua` | `bench2.lua` obfuscated with max preset, level 5 |
+| `bench3.balanced.obf.lua` | `bench3.lua` obfuscated with balanced preset, level 5 |
+| `bench3.max.obf.lua` | `bench3.lua` obfuscated with max preset, level 5 |
+| `Benchmark4.balanced.obf.lua` | `Benchmark4.lua` obfuscated with balanced preset, level 5 |
+| `Benchmark4.max.obf.lua` | `Benchmark4.lua` obfuscated with max preset, level 5 |
 
 ## Current Results
 
-Measured on `2026-04-30 05:02 UTC` with the executor simulation runner.
+Measured on `2026-04-30 05:29 UTC` with the executor simulation runner.
 
 These numbers are runtime totals from executing the obfuscated files , not obfuscator compile time.
 
 | Source | Output | Preset | Level | Runtime total |
 | --- | --- | --- | --- | ---: |
-| `benchmark.lua` | `benchmark.balanced.obf.lua` | balanced | 5 | `3.095676s` |
-| `benchmark.lua` | `benchmark.max.obf.lua` | max | 5 | `3.057614s` |
-| `bench2.lua` | `bench2.balanced.obf.lua` | balanced | 5 | `3.169639s` |
-| `bench2.lua` | `bench2.max.obf.lua` | max | 5 | `3.026420s` |
+| `benchmark.lua` | `benchmark.balanced.obf.lua` | balanced | 5 | `2.562003s` |
+| `benchmark.lua` | `benchmark.max.obf.lua` | max | 5 | `2.598986s` |
+| `bench2.lua` | `bench2.balanced.obf.lua` | balanced | 5 | `2.595104s` |
+| `bench2.lua` | `bench2.max.obf.lua` | max | 5 | `2.597424s` |
+| `bench3.lua` | `bench3.balanced.obf.lua` | balanced | 5 | `3.165484s` |
+| `bench3.lua` | `bench3.max.obf.lua` | max | 5 | `3.133723s` |
+| `Benchmark4.lua` | `Benchmark4.balanced.obf.lua` | balanced | 5 | `3.408863s` |
+| `Benchmark4.lua` | `Benchmark4.max.obf.lua` | max | 5 | `4.042500s` |
 
-Fastest current run: `bench2.max.obf.lua` at `3.026420s`.
+Fastest current run: `benchmark.balanced.obf.lua` at `2.562003s`.
