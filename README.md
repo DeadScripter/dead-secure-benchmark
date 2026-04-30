@@ -17,13 +17,15 @@ This repo includes the raw benchmark scripts plus the obfuscated outputs generat
 
 ## Current Results
 
-Measured on `2026-04-29 02:24 UTC` with the executor simulation runner.
+Measured on `2026-04-30 05:02 UTC` with the executor simulation runner.
 
 These numbers are runtime totals from executing the obfuscated files , not obfuscator compile time.
 
 | Source | Output | Preset | Level | Runtime total |
 | --- | --- | --- | --- | ---: |
-| `benchmark.lua` | `benchmark.balanced.obf.lua` | balanced | 5 | `6.082363s` |
-| `benchmark.lua` | `benchmark.max.obf.lua` | max | 5 | `6.028744s` |
-| `bench2.lua` | `bench2.balanced.obf.lua` | balanced | 5 | `1.21s` |
-| `bench2.lua` | `bench2.max.obf.lua` | max | 5 | `1.19s` |
+| `benchmark.lua` | `benchmark.balanced.obf.lua` | balanced | 5 | `3.095676s` |
+| `benchmark.lua` | `benchmark.max.obf.lua` | max | 5 | `3.057614s` |
+| `bench2.lua` | `bench2.balanced.obf.lua` | balanced | 5 | `3.169639s` |
+| `bench2.lua` | `bench2.max.obf.lua` | max | 5 | `3.026420s` |
+
+Fastest current run: `bench2.max.obf.lua` at `3.026420s`.
